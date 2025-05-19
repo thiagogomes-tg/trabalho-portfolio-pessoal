@@ -2,14 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    height: 120vh;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     font-size: 20px;
     color: #FFFFFF;
@@ -17,12 +15,11 @@ body {
 }
 
 header {
-    padding: 16px;
+    padding: 9px;
     display: flex;
     border-radius: 20px;
     justify-content: space-between;
     background: #272727;
-    text-align: center;
     align-items: center;
 }
 
@@ -39,11 +36,13 @@ footer {
     padding: 2em;
     border-radius: 20px;
     text-align: center;
-    justify-content: center;
     margin: 10px;
     max-height: 20%;
 }
 
+footer p {
+    font-size: 0.8em;
+}
 
 main {
     display: flex;
@@ -52,9 +51,7 @@ main {
     color: #FFFFFF;
     border-radius: 20px;
     padding: 2em 6em;
-    height: 80%;
-    max-height: 100%;
-    max-width: 100%;
+    flex: 1;
 }
 
 section {
@@ -67,7 +64,7 @@ section {
 }
 
 section p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 10px 0;
 }
 
@@ -95,9 +92,72 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #FFFFFF;
+}
+
+h4 {
+    display: inline-block;
+    width: 30%;
+    font-size: 1.1em;
+    color: #CCCCCC;
+    border-width: 50%;
+    border-bottom: 1px solid #444;
+}
+
 hr {
-  border: none;
-  height: 2px;
-  background-color: #4d4d4d;
-  margin: 20px 0;
+    border: none;
+    height: 2px;
+    background-color: #4d4d4d;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+li {
+    padding: 4px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 16px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button,
+input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #444;
+    color: inherit;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #666;
 }
